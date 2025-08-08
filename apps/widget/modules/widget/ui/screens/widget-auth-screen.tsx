@@ -15,16 +15,19 @@ import { api } from "@workspace/backend/_generated/api";
 
 import { WidgetHeader } from "@/modules/widget/ui/components/widget-header";
 import { Doc } from "@workspace/backend/_generated/dataModel";
+import { useAtomValue, useSetAtom } from "jotai";
+import { contactSessionIdAtomFamily, organizationIdAtom } from "../../atoms/widget-atoms";
 
 const formSchema = z.object({
     name: z.string().min(1, "Name is required"),
     email: z.string().email("Invalid email address"),
 })
 
-// TODO: Get organizationId from URL
-const organizationId = "123";
-
 export const WidgetAuthScreen = () => {
+    const organizationId = useAtomValue(organizationIdAtom);
+    const setContactSessionId = useSetAtom(
+        contactSessionIdAtomFamily(organizationId || "")
+    )
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -59,7 +62,7 @@ export const WidgetAuthScreen = () => {
             metadata
         })
 
-        console.log({contactSessionId})
+        setContactSessionId(contactSessionId)
     }
 
     return (
