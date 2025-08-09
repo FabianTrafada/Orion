@@ -12,12 +12,14 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@convex-dev/agent": "^0.1.17",
     "@hookform/resolvers": "^5.2.1",
     "@vapi-ai/web": "^2.3.8",
     "@workspace/backend": "workspace:*",
     "@workspace/math": "workspace:*",
     "@workspace/ui": "workspace:*",
     "convex": "1.25.4",
+    "convex-helpers": "0.1.100",
     "jotai": "^2.13.0",
     "lucide-react": "^0.475.0",
     "next": "^15.2.3",
