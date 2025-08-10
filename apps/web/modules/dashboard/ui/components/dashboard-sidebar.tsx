@@ -71,10 +71,10 @@ export const DashboardSidebar = () => {
     
     const isActive = (url: string) => {
         if (pathname === "/") {
-            return pathname === "/";
+            return false;
         }
 
-        return pathname.startsWith(url);
+        return pathname === url || pathname.startsWith(`${url}/`);
     }
     
     return (

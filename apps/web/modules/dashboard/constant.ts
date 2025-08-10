@@ -1,0 +1,1 @@
+export const STATUS_FILTER_KEY = "orion-status-filter";

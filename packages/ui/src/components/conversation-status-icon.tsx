@@ -8,7 +8,7 @@ interface ConversationStatusIconProps {
 const statusConfig = {
     resolved: {
         icon: CheckIcon,
-        bgColor: "bg-[--success]",
+        bgColor: "bg-green-500",
     },
     unresolved: {
         icon: ArrowRightIcon,
