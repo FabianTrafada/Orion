@@ -7,6 +7,7 @@ import { supportAgent } from "../system/ai/agents/supportAgent";
 import { escalateConversation } from "../system/ai/tools/escalateConversation";
 import { resolveConversation } from "../system/ai/tools/resolveConversation";
 import { saveMessage } from "@convex-dev/agent";
+import { search } from "../system/ai/tools/search";
 
 export const create = action({
     args: {
@@ -30,7 +31,7 @@ export const create = action({
         }
 
         const conversation = await ctx.runQuery(
-            internal.system.conversations.getByThread,
+            internal.system.conversations.getByThreadId,
             {
                 threadId: args.threadId,
             }
@@ -60,8 +61,9 @@ export const create = action({
                 {
                     prompt: args.prompt,
                     tools: {
-                        escalateConversation,
-                        resolveConversation
+                        escalateConversationTool: escalateConversation,
+                        resolveConversationTool: resolveConversation,
+                        searchTool: search,
                     }
                 }
             )

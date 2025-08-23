@@ -142,6 +142,7 @@ export const WidgetChatScreen = () => {
                                 key={message.id}
                             >
                                 <AIMessageContent>
+                                    {/* TODO: Change it to message.content if the package backed to normal... */}
                                     <AIResponse>{message.content}</AIResponse>
                                 </AIMessageContent>
                                 {message.role === "assistant" && (
