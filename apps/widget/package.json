@@ -16,7 +16,6 @@
     "@hookform/resolvers": "^5.2.1",
     "@vapi-ai/web": "^2.3.8",
     "@workspace/backend": "workspace:*",
-    "@workspace/math": "workspace:*",
     "@workspace/ui": "workspace:*",
     "convex": "1.25.4",
     "convex-helpers": "0.1.100",

@@ -17,7 +17,6 @@
     "@hookform/resolvers": "^5.2.1",
     "@sentry/nextjs": "^10",
     "@workspace/backend": "workspace:*",
-    "@workspace/math": "workspace:*",
     "@workspace/ui": "workspace:*",
     "convex": "1.25.4",
     "countries-and-timezones": "^3.8.0",
