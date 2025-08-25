@@ -1,4 +1,5 @@
 # Orion
+[![hackatime](https://hackatime-badge.hackclub.com/U099VGSRXNW/Orion)](https://hackatime-badge.hackclub.com/U099VGSRXNW/Orion)
 
 A modern SaaS AI-powered customer support platform built with Next.js, featuring intelligent conversation management, real-time messaging, and customizable AI-driven widgets.
 
